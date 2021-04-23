@@ -54,48 +54,7 @@ for ($i = 0; $i < rand(7, 20); $i++) {
 return $randomLongString;
 }
 
-$randomButtonActiveArray = [
-0 => " ",
-1 => "active"
-];
-
-$randomNavbarLightDarkArray = [
-0 => "navbar-light bg-light",
-1 => "navbar-dark bg-dark"
-];
-
-$string = <<<EOC
-this is a complex string
-EOC;
-
-$timestamp = time();
-?>
-
-
-<nav class="navbar navbar-expand-lg <?php echo $randomNavbarLightDarkArray[rand(0, 1)] ?>">
-<a class="navbar-brand" href="#"> <?php echo generateRandomString() ?></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-</button>
-
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-        
-        <!-- for loop for number of nav items, and each random array -->
-        <?php
-    $randomNavButtonQuantity = rand(0, 4);
-    ?>
-
-<?php for($randomNavButtonQuantity = 0; $randomNavButtonQuantity <= 4; $randomNavButtonQuantity++){ ?>
-<li class="nav-item <?php echo $randomButtonActiveArray[rand(0, 1)]?>"> 
-    <a class="nav-link" href="#"><?php echo generateRandomString() ?></a>
-</li>
-<?php
-    }
-    ?>
-    </ul>
-</div>
-</nav>
+    include 'navbarRandomiser.php'; ?>
 
 <div class="container-fluid">
 <?php
@@ -116,90 +75,20 @@ $timestamp = time();
             2 => "warning"
         ];
         ?>
-            
-            
-            <div class="row">
-                <?php 
-                    for($i = 1; $i <= (12 / $randomColumnsArray); $i++){ ?>
-                        <div class="col-lg-<?php echo $randomColumnsArray ?>">
-                        <div class="bound">
 
-                            <h4><?php echo generateRandomLongString() ?></h4>
-                            <p>
-                                <?php for($a = 0; $a <= (rand(1, 3)); $a++){
-                                    echo generateRandomLongString();
-                                    echo " ";
-                                } ?>
-                            </p>
-                            <a class="btn btn-<?php echo $ButtonColourArray[rand(0, 2)] ?>" href="#" role="button"><?php echo generateRandomString() ?></a>
-                        </div>
-                        </div>
-                        <?php 
-                    }
-                    ?>
-        </div>
-        
-        <?php
-        $randomColumnsArray = array_rand(array_flip($ColumnsArray), 1); 
-        // echo $randomColumnsArray;
+    <?php
+
+        $string = <<<EOC
+        this is a complex string
+        EOC;
+
+        $timestamp = time();
         ?>
-    
-    <div class="row">
-        <?php 
-                    for($i = 1; $i <= (12 / $randomColumnsArray); $i++){ ?>
-                        <div class="col-lg-<?php echo $randomColumnsArray ?>">
-                        <div class="bound">
-                            <h4><?php echo generateRandomLongString() ?></h4>
-                            <p>
-                                <?php for($a = 0; $a <= (rand(1, 3)); $a++){
-                                    echo generateRandomLongString();
-                                    echo " ";
-                                } ?>
-                            </p>
-                            <a class="btn btn-<?php echo $ButtonColourArray[rand(0, 2)] ?>" href="#" role="button"><?php echo generateRandomString() ?></a>
-                        </div>
-                        </div>
-                        <?php 
-                    }
-                    ?>
-        </div>
-        
-        <?php
-        $randomColumnsArray = array_rand(array_flip($ColumnsArray), 1); 
-        // echo $randomColumnsArray;
-        // add in spacing/margin or padding instead of counter
-        ?>
-    
-    <style>
-        .bound{
-            margin-right: 10px;
-            background-color:#f5f5f5;
-            padding: 12px;
-            };
-    </style>
 
-    <div class="row">
-        <?php 
-                    for($i = 1; $i <= (12 / $randomColumnsArray); $i++){ ?>
-                        
-                        <div class="col-lg-<?php echo $randomColumnsArray ?>">
-                            <div class="bound">
-                                <h4><?php echo generateRandomLongString() ?></h4>
-                                <p>
-                                    <?php for($a = 0; $a <= (rand(1, 3)); $a++){
-                                        echo generateRandomLongString();
-                                        echo " ";
-                                    } ?>
-                                </p>
-                                <a class="btn btn-<?php echo $ButtonColourArray[rand(0, 2)] ?>" href="#" role="button"><?php echo generateRandomString() ?></a>
+    <?php include 'rowRandomiser.php'; ?>
+    <?php include 'rowRandomiser.php'; ?>
+    <?php include 'rowRandomiser.php'; ?>
 
-                            </div>
-                        </div>
-                        
-                        <?php 
-                    }
-                    ?>
-        </div>
     </div>
     
     
@@ -226,6 +115,168 @@ $timestamp = time();
         });
     }
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+    // scrape webpage by getting all elements
+    
+    var header = document.getElementsByTagName("nav")[0].className;
+    var brand = document.getElementsByClassName("navbar-brand")[0].className;
+    var headerBtnQty = document.getElementsByTagName("li")[0].className;
+
+    // console.log(header);
+    
+    console.log("### NAV BAR MODE ###")
+    if(header == "navbar navbar-expand-lg navbar-dark bg-dark"){
+    console.log("navbar-dark bg-dark");
+    } else if(header == "navbar navbar-expand-lg navbar-light bg-light"){
+    console.log("navbar-light bg-light");
+    };
+    
+    // console.log(brand);
+    
+    console.log("### NAV BAR BUTTONS ###")
+    // console.log(headerBtnQty);
+    // how many LI in headerBtnQty ie navbar-nav
+    for(a = 0; a <= document.getElementsByTagName("li").length -1; a++){
+        var navbarBtnType = document.getElementsByTagName("li")[a].className;
+        console.log(navbarBtnType);
+    }
+    
+    // brand
+    // nav buttons inactive or nothing " "/active
+    // big text/ titles
+    // small text?
+    // footers probably not => Generated by Luca Bruno
+
+    var row = document.getElementsByClassName("row");
+    // var btnR = document.getElementsByClassName("btn-danger");
+    // var btnG = document.getElementsByClassName("btn-success");
+    // var btnY = document.getElementsByClassName("btn-warning");
+
+// console.log(row);
+
+// console.log(row[0]);
+
+    console.log("### ROW 1 ###")
+    var rowDiv = row[0].getElementsByTagName("div")[0].className;
+    console.log(row[0]);
+    console.log(rowDiv);
+    
+    if(rowDiv == "col-lg-3"){
+        console.log("4 elements");
+        // limit array to 4 elements 0 1 2 3
+        row[0].getElementsByClassName("btn").length = 4;
+    }
+    else if(rowDiv == "col-lg-4"){
+        console.log("3 elements");
+        // limit array to 3 elements 0 1 2
+        row[0].getElementsByClassName("btn").length = 3;
+    }else if(rowDiv == "col-lg-6"){
+        console.log("2 elements");
+        // limit array to 2 elements 0 1
+        row[0].getElementsByClassName("btn").length = 2;
+    }else if(rowDiv == "col-lg-12"){
+        console.log("1 element");
+        // limit array to 1 element 0
+        row[0].getElementsByClassName("btn").length = 1;
+    }
+    
+    console.log("### ROW 2 ###")
+    var rowDiv2 = row[1].getElementsByTagName("div")[0].className;
+    console.log(row[1]);
+    console.log(rowDiv2);
+    
+    if(rowDiv2 == "col-lg-3"){
+        console.log("4 elements");
+        // limit array to 4 elements 0 1 2 3
+        row[1].getElementsByClassName("btn").length = 4;
+    }
+    else if(rowDiv2 == "col-lg-4"){
+    console.log("3 elements");
+    // limit array to 3 elements 0 1 2
+    row[1].getElementsByClassName("btn").length = 3;
+    }else if(rowDiv2 == "col-lg-6"){
+    console.log("2 elements");
+    // limit array to 2 elements 0 1
+    row[1].getElementsByClassName("btn").length = 2;
+    }else if(rowDiv2 == "col-lg-12"){
+        console.log("1 element");
+    // limit array to 1 element 0
+    row[1].getElementsByClassName("btn").length = 1;
+    }
+    
+    console.log("### ROW 3 ###")
+    var rowDiv3 = row[2].getElementsByTagName("div")[0].className;
+    console.log(row[2]);
+    console.log(rowDiv3);
+    
+
+    if(rowDiv3 == "col-lg-3"){
+    console.log("4 elements");
+    // limit array to 4 elements 0 1 2 3
+    row[2].getElementsByClassName("btn").length = 4;
+    }
+    else if(rowDiv3 == "col-lg-4"){
+    console.log("3 elements");
+    // limit array to 3 elements 0 1 2
+    row[2].getElementsByClassName("btn").length = 3;
+    }else if(rowDiv3 == "col-lg-6"){
+    console.log("2 elements");
+    // limit array to 2 elements 0 1
+    row[2].getElementsByClassName("btn").length = 2;
+    }else if(rowDiv3 == "col-lg-12"){
+        console.log("1 element");
+    // limit array to 1 element 0
+    row[2].getElementsByClassName("btn").length = 1;
+    }
+
+
+// console.log(row[2].getElementsByClassName("btn"));
+
+
+    console.log("### ROW 1 BUTTONS ###");
+// open up loops
+    for(i = 0; i <= row[0].getElementsByClassName("btn").length -1; i++){
+        var rowBtn1 = row[0].getElementsByClassName("btn")[i].className;
+        console.log(rowBtn1);
+    }
+
+    console.log("### ROW 2 BUTTONS ###");
+
+    for(i = 0; i <= row[1].getElementsByClassName("btn").length -1; i++){
+        var rowBtn2 = row[1].getElementsByClassName("btn")[i].className;
+        console.log(rowBtn2);
+    }
+    
+    console.log("### ROW 3 BUTTONS ###");
+
+    for(i = 0; i <= row[2].getElementsByClassName("btn").length -1; i++){
+        var rowBtn3 = row[2].getElementsByClassName("btn")[i].className;
+        console.log(rowBtn3);
+    }
+
+    // create vars of txt needed
+  })    
+
+    // var logBackup = console.log;
+    // var logMessages = [];
+
+    // console.log = function() {
+    // logMessages.push.apply(logMessages, arguments);
+    // logBackup.apply(console, arguments);
+    // };
+
+    // console.log(logMessages);
+    // console.log("Hello");
+
+
+
+
+    var timerino = <?php echo $timestamp ?>
+    </script>
+    
+    <script src="./dslStructureGenerator.js"></script>
 
     <button id="CaptureButton" style="opacity: 0" onclick="doCapture();">Capture</button>
         </body>
