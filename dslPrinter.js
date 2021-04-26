@@ -9,7 +9,7 @@ console.log('Printing DSL structure...');
 
 
 app.get("/", function(req, res){
-    res.send("jimmy");
+    res.send("hello");
 })
 
 app.post("/toFile/:string/:timerino", async function(req, res){
@@ -22,9 +22,8 @@ app.post("/toFile/:string/:timerino", async function(req, res){
         }
     });
     res.send(req.params.string);
-    // res.send("jimmy");
 })
 
 app.listen(process.env.port||8000, function(){
-    console.log("joshua");
+    console.log("8000 port connect");
 });
