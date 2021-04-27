@@ -78,10 +78,6 @@ return $randomLongString;
 
     <?php
 
-        $string = <<<EOC
-        this is a complex string
-        EOC;
-
         $timestamp = time();
         ?>
 
@@ -117,23 +113,24 @@ return $randomLongString;
     </script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
+    document.addEventListener('DOMContentLoaded', (event) => {
     // scrape webpage by getting all elements
     
-    var header = document.getElementsByTagName("nav")[0].className;
+    var navbar = document.getElementsByTagName("nav")[0].className;
     var brand = document.getElementsByClassName("navbar-brand")[0].className;
     var headerBtnQty = document.getElementsByTagName("li")[0].className;
 
     // console.log(header);
     
     console.log("### NAV BAR MODE ###")
-    if(header == "navbar navbar-expand-lg navbar-dark bg-dark"){
+    if(navbar == "navbar navbar-expand-lg navbar-dark bg-dark"){
     console.log("navbar-dark bg-dark");
-    } else if(header == "navbar navbar-expand-lg navbar-light bg-light"){
+    } else if(navbar == "navbar navbar-expand-lg navbar-light bg-light"){
     console.log("navbar-light bg-light");
     };
     
-    // console.log(brand);
+    console.log("### NAV BAR BRAND ###")
+    console.log(brand);
     
     console.log("### NAV BAR BUTTONS ###")
     // console.log(headerBtnQty);
