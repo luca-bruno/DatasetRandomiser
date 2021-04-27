@@ -19,21 +19,24 @@
 
 console.log("#########################################")
 var temp = "";
+
+// TODO: INCLUDE HEADER RANDOMISATION
+
 var rows = document.getElementsByClassName("row");
 // loop thru rows
     for(i = 0; i < rows.length; i++){
-        temp += "row {\n";
+        temp += "row{\n";
         var containers = rows[i].getElementsByTagName("div");
         for(a = 0; a < containers.length; a++){
             if(containers[a].className){
             temp += ClassGUIs(containers[a].className) + "{\n";
                 var title = containers[a].getElementsByTagName("h4");
                 if(title){
-                    temp += "small-title, ";
+                    temp += "small-title,";
                 }
                 var paragraph = containers[a].getElementsByTagName("p");
                 if(title){
-                    temp += "text, ";
+                    temp += "text,";
                 }
                 var button = containers[a].getElementsByClassName("btn");
                 temp += ClassGUIs(button[0].className);
