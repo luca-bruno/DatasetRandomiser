@@ -25,11 +25,11 @@ var temp = "";
 var rows = document.getElementsByClassName("row");
 // loop thru rows
     for(i = 0; i < rows.length; i++){
-        temp += "row{\n";
+        temp += "row{&";
         var containers = rows[i].getElementsByTagName("div");
         for(a = 0; a < containers.length; a++){
             if(containers[a].className){
-            temp += ClassGUIs(containers[a].className) + "{\n";
+            temp += ClassGUIs(containers[a].className) + "{&";
                 var title = containers[a].getElementsByTagName("h4");
                 if(title){
                     temp += "small-title,";
@@ -41,10 +41,10 @@ var rows = document.getElementsByClassName("row");
                 var button = containers[a].getElementsByClassName("btn");
                 temp += ClassGUIs(button[0].className);
                 // console.log(button);
-                temp += "\n}\n";
+                temp += "&}&";
         }
         }
-        temp += "}\n";
+        temp += "}&";
     }
     console.log(temp);
     // console.log(containers);
