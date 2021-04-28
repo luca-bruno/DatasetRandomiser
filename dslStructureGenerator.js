@@ -22,14 +22,14 @@ var temp = "";
 
 // TODO: INCLUDE HEADER RANDOMISATION
 
-temp += "navbar{&"; // NOT DYNAMIC
+temp += "navbar {&"; // NOT DYNAMIC
 // NAVBAR BRAND SHOW - NOT DYNAMIC, JUST INCLUDE IN TEMP STRING 
 // RECHECK { AND SPACE FORMAT
 temp += "brand&";
 // NAVBAR COLOUR DARK/LIGHT RANDOMISATION
 var navbar = document.getElementsByTagName("nav");
 // console.log(navbar[0].className);
-temp += classesGUI(navbar[0].className) + "{&";
+temp += classesGUI(navbar[0].className) + " {&";
 // whether dark or light = if function
 // navbar-dark{ navbar-light{
 
@@ -37,7 +37,7 @@ temp += classesGUI(navbar[0].className) + "{&";
 var headerBtnQty = document.getElementsByTagName("li");
 // console.log(headerBtnQty.length);
 for(x = 0; x < headerBtnQty.length; x++){
-    temp += classesGUI(headerBtnQty[x].className) + ",";
+    temp += classesGUI(headerBtnQty[x].className) + " ,";
 }
 temp = temp.slice(0, -1) // remove extra comma after final loop iteration
 temp += "&}&";
@@ -48,18 +48,18 @@ temp += "&}&";
 var rows = document.getElementsByClassName("row");
 // loop thru rows
     for(i = 0; i < rows.length; i++){
-        temp += "row{&";
+        temp += "row {&";
         var containers = rows[i].getElementsByTagName("div");
         for(a = 0; a < containers.length; a++){
             if(containers[a].className){
-            temp += classesGUI(containers[a].className) + "{&";
+            temp += classesGUI(containers[a].className) + " {&";
                 var title = containers[a].getElementsByTagName("h4");
                 if(title){
-                    temp += "small-title,";
+                    temp += "small-title, ";
                 }
                 var paragraph = containers[a].getElementsByTagName("p");
                 if(title){
-                    temp += "text,";
+                    temp += "text, ";
                 }
                 var button = containers[a].getElementsByClassName("btn");
                 temp += classesGUI(button[0].className);
