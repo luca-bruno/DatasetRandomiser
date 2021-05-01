@@ -1,0 +1,1 @@
+navbar-dark {&brand&navbar {&nav-inactive, nav-inactive, nav-inactive, nav-inactive, nav-active&}&row {&quadruple {&small-title, text, btn-green&}&quadruple {&small-title, text, btn-green&}&quadruple {&small-title, text, btn-green&}&quadruple {&small-title, text, btn-green&}&}&row {&single {&small-title, text, btn-red&}&}&row {&single {&small-title, text, btn-red&}&}&

@@ -7,14 +7,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         
     <style>
-    .header{margin:20px 0}
-    nav ul.nav-pills li{background-color:#333;border-radius:4px;margin-right:10px}
-    /* .col-lg-3{width:24%;margin-right:1.333333%}
-    .col-lg-6{width:49%;margin-right:2%} */
-    /* .col-lg-4{width:32.64%;;margin-right:1.033333%} */
     .col-lg-12,.col-lg-3,.col-lg-6,.col-lg-4{margin-bottom:0px;border-radius:6px;padding:20px}
-    .row .col-lg-3:last-child,.row .col-lg-6:last-child,.row .col-lg-4:last-child{margin-right:0}  /* add col-lg-4 up here? */
-    /* .row{flex-wrap: nowrap} */
+    /* .row .col-lg-3:last-child,.row .col-lg-6:last-child,.row .col-lg-4:last-child{margin-right:0}  add col-lg-4 up here? */
     footer{padding:20px 0;text-align:center;border-top:1px solid #bbb}
     </style>
 

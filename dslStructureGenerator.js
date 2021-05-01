@@ -22,24 +22,24 @@ var temp = "";
 
 // TODO: INCLUDE HEADER RANDOMISATION
 
-temp += "navbar {&"; // NOT DYNAMIC
+var navbar = document.getElementsByTagName("nav");
+temp += classesGUI(navbar[0].className) + " {&";
+// whether dark or light = if function
+// navbar-dark{ navbar-light{
 // NAVBAR BRAND SHOW - NOT DYNAMIC, JUST INCLUDE IN TEMP STRING 
 // RECHECK { AND SPACE FORMAT
 temp += "brand&";
 // NAVBAR COLOUR DARK/LIGHT RANDOMISATION
-var navbar = document.getElementsByTagName("nav");
 // console.log(navbar[0].className);
-temp += classesGUI(navbar[0].className) + " {&";
-// whether dark or light = if function
-// navbar-dark{ navbar-light{
+    temp += "navbar {&"; // NOT DYNAMIC
 
 // NAVBAR BUTTON QTY + ON/OFF RANDOMISATION
 var headerBtnQty = document.getElementsByTagName("li");
 // console.log(headerBtnQty.length);
 for(x = 0; x < headerBtnQty.length; x++){
-    temp += classesGUI(headerBtnQty[x].className) + " ,";
+    temp += classesGUI(headerBtnQty[x].className) + ", ";
 }
-temp = temp.slice(0, -1) // remove extra comma after final loop iteration
+temp = temp.slice(0, -2) // remove extra comma and space after final loop iteration
 temp += "&}&";
 // 5 btns - either active or inactive
 // nav-btn-active{ nav-btn-inactive{
@@ -104,7 +104,7 @@ var rows = document.getElementsByClassName("row");
             return "nav-active";
         }
         else if(className == "nav-item inactive"){
-            return "nav-active";
+            return "nav-inactive";
         }
         else{
             return "";
