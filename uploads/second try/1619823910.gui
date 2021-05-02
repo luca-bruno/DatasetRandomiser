@@ -1,0 +1,41 @@
+navbar-light {
+brand
+navbar {
+nav-inactive, nav-inactive, nav-inactive, nav-inactive, nav-active
+}
+row {
+quadruple {
+small-title, text, btn-green
+}
+quadruple {
+small-title, text, btn-yellow
+}
+quadruple {
+small-title, text, btn-green
+}
+quadruple {
+small-title, text, btn-green
+}
+}
+row {
+triple {
+small-title, text, btn-yellow
+}
+triple {
+small-title, text, btn-green
+}
+triple {
+small-title, text, btn-yellow
+}
+}
+row {
+triple {
+small-title, text, btn-red
+}
+triple {
+small-title, text, btn-green
+}
+triple {
+small-title, text, btn-yellow
+}
+}

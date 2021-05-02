@@ -1,0 +1,26 @@
+navbar-dark {
+brand
+navbar {
+nav-inactive, nav-inactive, nav-active, nav-active, nav-inactive
+}
+row {
+single {
+small-title, text, btn-yellow
+}
+}
+row {
+double {
+small-title, text, btn-yellow
+}
+double {
+small-title, text, btn-red
+}
+}
+row {
+double {
+small-title, text, btn-yellow
+}
+double {
+small-title, text, btn-green
+}
+}

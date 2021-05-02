@@ -41,6 +41,7 @@ for(x = 0; x < headerBtnQty.length; x++){
 }
 temp = temp.slice(0, -2) // remove extra comma and space after final loop iteration
 temp += "&}&";
+temp += "}&";
 // 5 btns - either active or inactive
 // nav-btn-active{ nav-btn-inactive{
 

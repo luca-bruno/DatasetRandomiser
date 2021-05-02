@@ -1,0 +1,30 @@
+navbar-light {
+brand
+navbar {
+nav-active, nav-inactive, nav-active, nav-inactive, nav-inactive
+}
+}
+row {
+triple {
+small-title, text, btn-green
+}
+triple {
+small-title, text, btn-green
+}
+triple {
+small-title, text, btn-yellow
+}
+}
+row {
+double {
+small-title, text, btn-green
+}
+double {
+small-title, text, btn-green
+}
+}
+row {
+single {
+small-title, text, btn-yellow
+}
+}

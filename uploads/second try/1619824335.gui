@@ -1,0 +1,38 @@
+navbar-dark {
+brand
+navbar {
+nav-active, nav-active, nav-active, nav-inactive, nav-active
+}
+row {
+quadruple {
+small-title, text, btn-green
+}
+quadruple {
+small-title, text, btn-yellow
+}
+quadruple {
+small-title, text, btn-red
+}
+quadruple {
+small-title, text, btn-green
+}
+}
+row {
+double {
+small-title, text, btn-yellow
+}
+double {
+small-title, text, btn-yellow
+}
+}
+row {
+triple {
+small-title, text, btn-yellow
+}
+triple {
+small-title, text, btn-yellow
+}
+triple {
+small-title, text, btn-red
+}
+}
