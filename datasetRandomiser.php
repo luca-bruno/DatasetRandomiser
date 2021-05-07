@@ -83,7 +83,7 @@ return $randomLongString;
     
     
     <footer class="footer">
-        <p>&copy; <?php echo generateRandomString()?> 2020 </p>
+        <p>Luca Bruno 2020. Based off of &copy; 2017 Tony Beltramelli.</p>
     </footer>
 
     <script> 

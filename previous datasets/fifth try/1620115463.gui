@@ -1,0 +1,47 @@
+header {
+navbar-dark {
+brand
+navbar {
+nav-active, nav-active, nav-inactive, nav-inactive, nav-active
+}
+}
+}
+row {
+triple {
+small-title, text, btn-red
+}
+triple {
+small-title, text, btn-green
+}
+triple {
+small-title, text, btn-green
+}
+}
+row {
+quadruple {
+small-title, text, btn-green
+}
+quadruple {
+small-title, text, btn-yellow
+}
+quadruple {
+small-title, text, btn-red
+}
+quadruple {
+small-title, text, btn-green
+}
+}
+row {
+quadruple {
+small-title, text, btn-red
+}
+quadruple {
+small-title, text, btn-yellow
+}
+quadruple {
+small-title, text, btn-green
+}
+quadruple {
+small-title, text, btn-green
+}
+}

@@ -10,7 +10,9 @@
         ];
     ?>
 
-<nav class="navbar navbar-expand-lg <?php echo $randomNavbarLightDarkArray[rand(0, 1)] ?>">
+<!-- <nav class="navbar navbar-expand-lg <?php // echo $randomNavbarLightDarkArray[rand(0, 1)] ?>"> -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!-- FIXME: TEMPORARY FIX -->
     
         <a class="navbar-brand" href="#"> <?php echo generateRandomString() ?></a>
     

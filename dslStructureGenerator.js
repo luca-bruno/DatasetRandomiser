@@ -23,15 +23,19 @@ var temp = "";
 // TODO: INCLUDE HEADER RANDOMISATION
 
 var navbar = document.getElementsByTagName("nav");
-temp += classesGUI(navbar[0].className) + " {&";
+// temp += "header {&";
+// ! FIXME: removed temporarily, merged DSL into navbar-light/navbar-dark
+// temp += classesGUI(navbar[0].className) + " {&";
 // whether dark or light = if function
 // navbar-dark{ navbar-light{
-// NAVBAR BRAND SHOW - NOT DYNAMIC, JUST INCLUDE IN TEMP STRING 
+temp += "navbar-dark {&";
+// ! TEMP DATASET TEST: hard-coding navbar-dark
+    // NAVBAR BRAND SHOW - NOT DYNAMIC, JUST INCLUDE IN TEMP STRING 
 // RECHECK { AND SPACE FORMAT
 temp += "brand&";
 // NAVBAR COLOUR DARK/LIGHT RANDOMISATION
 // console.log(navbar[0].className);
-    temp += "navbar {&"; // NOT DYNAMIC
+    temp += "navbar {&"; // NOT DYNAMIC 
 
 // NAVBAR BUTTON QTY + ON/OFF RANDOMISATION
 var headerBtnQty = document.getElementsByTagName("li");
@@ -42,6 +46,8 @@ for(x = 0; x < headerBtnQty.length; x++){
 temp = temp.slice(0, -2) // remove extra comma and space after final loop iteration
 temp += "&}&";
 temp += "}&";
+// temp += "}&";
+// ! FIXME: removed temporarily, merged DSL into navbar-light/navbar-dark
 // 5 btns - either active or inactive
 // nav-btn-active{ nav-btn-inactive{
 

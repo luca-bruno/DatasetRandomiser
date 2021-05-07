@@ -3,7 +3,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 import time
 
 # 291 actions for 1/6
-for i in range(191): 
+for i in range(291): 
     browser = webdriver.Chrome('E:\\xampp\\htdocs\\datasetRandomiser\\chromedriver.exe')
     browser.maximize_window()
     browser.get("http://localhost/datasetRandomiser/datasetRandomiser.php")

@@ -1,0 +1,35 @@
+header{
+navbar-light {
+brand
+navbar {
+nav-active, nav-inactive, nav-inactive, nav-inactive, nav-inactive
+}
+}
+}
+row {
+single {
+small-title, text, btn-green
+}
+}
+row {
+triple {
+small-title, text, btn-red
+}
+triple {
+small-title, text, btn-red
+}
+triple {
+small-title, text, btn-yellow
+}
+}
+row {
+triple {
+small-title, text, btn-red
+}
+triple {
+small-title, text, btn-red
+}
+triple {
+small-title, text, btn-red
+}
+}
